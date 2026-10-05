@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GoldCommunity — Community Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">G</div>
+
+            <div>
+                <h1>GoldCommunity</h1>
+                <span>Yagona community</span>
+            </div>
+
+        </div>
+
+
+        <button class="create-btn" id="createPostBtn">
+            <span>＋</span>
+            Yangi post
+        </button>
+
+
+        <nav>
+
+            <p class="section-title">
+                ASOSIY
+            </p>
+
+            <button class="nav-item active">
+                <span>⌂</span>
+                Bosh sahifa
+            </button>
+
+            <button class="nav-item">
+                <span>🔥</span>
+                Mashhur
+            </button>
+
+            <button class="nav-item">
+                <span>◷</span>
+                So‘nggi
+            </button>
+
+            <button class="nav-item">
+                <span>🔖</span>
+                Saqlangan
+            </button>
+
+
+            <p class="section-title">
+                COMMUNITY
+            </p>
+
+            <button class="community-item">
+
+                <div class="community-icon tech">
+                    💻
+                </div>
+
+                <span>IT O‘zbekiston</span>
+
+                <b>12K</b>
+
+            </button>
+
+
+            <button class="community-item">
+
+                <div class="community-icon design">
+                    🎨
+                </div>
+
+                <span>Design UZ</span>
+
+                <b>8.4K</b>
+
+            </button>
+
+
+            <button class="community-item">
+
+                <div class="community-icon startup">
+                    🚀
+                </div>
+
+                <span>Startup UZ</span>
+
+                <b>6.7K</b>
+
+            </button>
+
+
+            <button class="community-item">
+
+                <div class="community-icon study">
+                    📚
+                </div>
+
+                <span>Study Club</span>
+
+                <b>5.2K</b>
+
+            </button>
+
+
+            <button class="show-more">
+                Barchasini ko‘rish →
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button>
+                ⚙ Sozlamalar
+            </button>
+
+            <button>
+                ? Yordam
+            </button>
+
+            <p>
+                Muallif: Akramjanova Jadra Maratovna.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="mobile-brand">
+                <div class="brand-logo">
+                    G
+                </div>
+            </div>
+
+
+            <div class="search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Community, post yoki foydalanuvchini qidiring..."
+                >
+
+                <kbd>Ctrl K</kbd>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    class="top-btn"
+                    id="notificationBtn"
+                >
+                    ♢
+                    <i></i>
+                </button>
+
+                <button
+                    class="top-btn"
+                    id="messageBtn"
+                >
+                    ◇
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        AJ
+                    </div>
+
+                    <div>
+                        <strong>Jadra</strong>
+                        <span>Level 24</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= FEED ================= -->
+
+        <section class="feed">
+
+            <div class="feed-header">
+
+                <div>
+
+                    <h2>
+                        Community Feed
+                    </h2>
+
+                    <p>
+                        Hamjamiyatdagi eng qiziqarli postlar
+                    </p>
+
+                </div>
+
+
+                <select id="sortSelect">
+
+                    <option value="popular">
+                        Mashhur
+                    </option>
+
+                    <option value="new">
+                        Eng yangi
+                    </option>
+
+                    <option value="discussed">
+                        Eng ko‘p muhokama
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="posts"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= RIGHT PANEL ================= -->
+
+    <aside class="right-panel">
+
+        <!-- PROFILE -->
+        <div class="right-card user-card">
+
+            <div class="cover"></div>
+
+            <div class="right-profile">
+
+                <div class="big-avatar">
+                    AJ
+                </div>
+
+                <h3>
+                    Jadra Akramjanova
+                </h3>
+
+                <span>
+                    @jadra_dev
+                </span>
+
+                <p>
+                    Developer • Creator • Community Builder
+                </p>
+
+                <div class="profile-stats">
+
+                    <div>
+                        <strong>248</strong>
+                        <span>Post</span>
+                    </div>
+
+                    <div>
+                        <strong>4.8K</strong>
+                        <span>Follower</span>
+                    </div>
+
+                    <div>
+                        <strong>1.2K</strong>
+                        <span>Following</span>
+                    </div>
+
+                </div>
+
+                <button class="profile-btn">
+                    Profilni ko‘rish
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRENDING -->
+        <div class="right-card">
+
+            <div class="right-title">
+
+                <h3>
+                    🔥 Trend mavzular
+                </h3>
+
+                <button>•••</button>
+
+            </div>
+
+
+            <div class="trend">
+
+                <span>#webdevelopment</span>
+                <b>4.8K post</b>
+
+            </div>
+
+            <div class="trend">
+
+                <span>#javascript</span>
+                <b>3.2K post</b>
+
+            </div>
+
+            <div class="trend">
+
+                <span>#ai</span>
+                <b>2.9K post</b>
+
+            </div>
+
+            <div class="trend">
+
+                <span>#startup</span>
+                <b>2.4K post</b>
+
+            </div>
+
+            <div class="trend">
+
+                <span>#design</span>
+                <b>1.8K post</b>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOP COMMUNITY -->
+        <div class="right-card">
+
+            <div class="right-title">
+
+                <h3>
+                    🏆 Top Community
+                </h3>
+
+                <button>•••</button>
+
+            </div>
+
+
+            <div class="top-community">
+
+                <div class="rank">
+                    01
+                </div>
+
+                <div class="community-icon tech">
+                    💻
+                </div>
+
+                <div class="community-info">
+
+                    <strong>
+                        IT O‘zbekiston
+                    </strong>
+
+                    <span>
+                        12.4K a'zo
+                    </span>
+
+                </div>
+
+                <button class="join-btn">
+                    + 
+                </button>
+
+            </div>
+
+
+            <div class="top-community">
+
+                <div class="rank">
+                    02
+                </div>
+
+                <div class="community-icon startup">
+                    🚀
+                </div>
+
+                <div class="community-info">
+
+                    <strong>
+                        Startup UZ
+                    </strong>
+
+                    <span>
+                        6.7K a'zo
+                    </span>
+
+                </div>
+
+                <button class="join-btn">
+                    +
+                </button>
+
+            </div>
+
+
+            <div class="top-community">
+
+                <div class="rank">
+                    03
+                </div>
+
+                <div class="community-icon design">
+                    🎨
+                </div>
+
+                <div class="community-info">
+
+                    <strong>
+                        Design UZ
+                    </strong>
+
+                    <span>
+                        8.4K a'zo
+                    </span>
+
+                </div>
+
+                <button class="join-btn">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                Qoidalar
+            </span>
+
+            <span>
+                Maxfiylik
+            </span>
+
+            <span>
+                Shartlar
+            </span>
+
+            <span>
+                © 2026 GoldCommunity
+            </span>
+
+        </footer>
+
+    </aside>
+
+</div>
+
+
+<!-- ================= CREATE POST MODAL ================= -->
+
+<div
+    class="modal"
+    id="postModal"
+>
+
+    <div class="modal-card">
+
+        <button
+            class="close"
+            id="closeModal"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-user">
+
+            <div class="profile-avatar">
+                AJ
+            </div>
+
+            <div>
+
+                <strong>
+                    Jadra Akramjanova
+                </strong>
+
+                <span>
+                    Community'ga post
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <textarea
+            id="newPostText"
+            placeholder="Nima haqida o‘ylayapsiz?"
+        ></textarea>
+
+
+        <div class="post-tools">
+
+            <button>
+                🖼 Rasm
+            </button>
+
+            <button>
+                🎬 Video
+            </button>
+
+            <button>
+                😊 Emoji
+            </button>
+
+            <button>
+                📊 So‘rovnoma
+            </button>
+
+        </div>
+
+
+        <div class="modal-bottom">
+
+            <select id="communitySelect">
+
+                <option>
+                    💻 IT O‘zbekiston
+                </option>
+
+                <option>
+                    🎨 Design UZ
+                </option>
+
+                <option>
+                    🚀 Startup UZ
+                </option>
+
+                <option>
+                    📚 Study Club
+                </option>
+
+            </select>
+
+
+            <button
+                class="publish-btn"
+                id="publishBtn"
+            >
+                Post qilish
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MESSAGE MODAL ================= -->
+
+<div
+    class="modal"
+    id="messageModal"
+>
+
+    <div class="message-card">
+
+        <button
+            class="close"
+            id="closeMessage"
+        >
+            ×
+        </button>
+
+        <h2>
+            💬 Xabarlar
+        </h2>
+
+        <div class="message-list">
+
+            <div class="message-item">
+
+                <div class="profile-avatar">
+                    SD
+                </div>
+
+                <div>
+                    <strong>
+                        Sardor Dev
+                    </strong>
+
+                    <span>
+                        Yangi loyiha haqida...
+                    </span>
+                </div>
+
+                <b>
+                    2
+                </b>
+
+            </div>
+
+
+            <div class="message-item">
+
+                <div class="profile-avatar">
+                    MU
+                </div>
+
+                <div>
+                    <strong>
+                        Madina UI
+                    </strong>
+
+                    <span>
+                        Design tayyor bo‘ldi.
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
